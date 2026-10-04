@@ -1,0 +1,4 @@
+numpy>=1.24
+scipy>=1.10
+# Optional GPU backend: install the CuPy build that matches your CUDA version,
+# e.g. cupy-cuda12x on a CUDA 12 environment.

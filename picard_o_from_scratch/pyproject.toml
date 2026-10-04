@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "picard-o-from-scratch"
+version = "1.0.0"
+description = "Validated Orthogonal Picard ICA implementation with NumPy and CuPy backends"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+]
+license = {text = "BSD-3-Clause"}
+authors = [
+    {name = "Eng. Mohammad Project"}
+]
+keywords = ["ICA", "Picard", "EEG", "CuPy", "NumPy", "signal-processing"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["picard_o*"]
+
+[project.optional-dependencies]
+gpu = ["cupy-cuda12x"]
+dev = ["pytest>=7.0", "python-picard>=0.8.1"]
